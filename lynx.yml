@@ -1,0 +1,5 @@
+- hosts: target
+  become: yes
+  tasks:
+      - name: lynx is installed
+        yum: name=lynx state=installed
