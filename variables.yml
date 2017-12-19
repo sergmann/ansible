@@ -1,0 +1,10 @@
+- hosts: target
+  become: yes
+  tasks:
+      - name: General packages are installed
+        yum: name={{ item }} state=installed
+        with_items:
+            - vim-enhanced
+            - wget
+            - unzip
+        tags: General_packages
